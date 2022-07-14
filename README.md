@@ -81,6 +81,13 @@ The following table lists the helpers available in the library which are scoped 
 | `common.affinities.pods.soft`  | Return a soft podAffinity/podAntiAffinity definition | `dict "component" "FOO" "context" $`           |
 | `common.affinities.pods.hard`  | Return a hard podAffinity/podAntiAffinity definition | `dict "component" "FOO" "context" $`           |
 
+### TplValues
+
+| Helper identifier         | Description                            | Expected Input                                                                                                                                           |
+|---------------------------|----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `common.tplvalues.render` | Renders a value that contains template | `dict "value" .Values.path.to.the.Value "context" $`, value is the value should rendered as template, context frequently is the chart context `$` or `.` |
+
+
 ## Special input schemas
 
 ### ImageRoot
