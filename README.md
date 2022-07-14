@@ -72,6 +72,14 @@ The following table lists the helpers available in the library which are scoped 
 | `common.capabilities.hpa.apiVersion`           | Return the appropriate apiVersion for Horizontal Pod Autoscaler                                | `.` Chart context |
 | `common.capabilities.supportsHelmVersion`      | Returns true if the used Helm version is 3.3+                                                  | `.` Chart context |
 
+### Affinities
+
+| Helper identifier             | Description                                          | Expected Input                                 |
+|-------------------------------|------------------------------------------------------|------------------------------------------------|
+| `common.affinities.nodes.soft` | Return a soft nodeAffinity definition                | `dict "key" "FOO" "values" (list "BAR" "BAZ")` |
+| `common.affinities.nodes.hard` | Return a hard nodeAffinity definition                | `dict "key" "FOO" "values" (list "BAR" "BAZ")` |
+| `common.affinities.pods.soft`  | Return a soft podAffinity/podAntiAffinity definition | `dict "component" "FOO" "context" $`           |
+| `common.affinities.pods.hard`  | Return a hard podAffinity/podAntiAffinity definition | `dict "component" "FOO" "context" $`           |
 
 ## Special input schemas
 
